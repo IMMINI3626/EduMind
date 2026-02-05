@@ -1,0 +1,59 @@
+{
+  "question_filename": "H_1_01_25766_84192.png",
+  "id": "25766_84192",
+  "question_info": [
+    {
+      "question_grade": "H",
+      "question_term": 1,
+      "question_unit": "01",
+      "question_topic": "0101001",
+      "question_topic_name": "다항식의 덧셈과 뺄셈",
+      "question_type1": "단답형",
+      "question_type2": 2,
+      "question_condition": 0,
+      "question_sector1": "이해",
+      "question_sector2": "변화와 관계",
+      "question_step": "기본",
+      "question_difficulty": 2,
+      "question_contents": 0
+    }
+  ],
+  "OCR_info": [
+    {
+      "figure_text": null,
+      "question_text": "세 다항식 $A=x^2-y^2,B=-x^2-4xy+y^2,C=3x^2+2xy+12$에 대하여 $2A+B-C$를 계산하여 $x,y$에 대한 식으로 나타내시오.",
+      "question_bbox": [
+        {
+          "type": "line",
+          "bbox": [
+            1,
+            1,
+            546,
+            26
+          ],
+          "text": null
+        },
+        {
+          "type": "line",
+          "bbox": [
+            1,
+            28,
+            427,
+            51
+          ],
+          "text": null
+        },
+        {
+          "type": "paragraph",
+          "bbox": [
+            1,
+            1,
+            548,
+            52
+          ],
+          "text": "세 다항식 $A=x^2-y^2,B=-x^2-4xy+y^2,C=3x^2+2xy+12$에 대하여 $2A+B-C$를 계산하여 $x,y$에 대한 식으로 나타내시오."
+        }
+      ]
+    }
+  ]
+}

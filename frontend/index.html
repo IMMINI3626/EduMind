@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMind</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']] // $ 표시를 수식으로 인식해라!
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+    <h1>EduMind</h1>
+
+    <div class="problem-box">
+        <h3>Q. 다음 문제를 풀어보세요.</h3>
+        
+        <p id="problem-text" style="font-size: 1.2em; margin-bottom: 10px; display: none;"></p>
+        
+        <img id="problem-image" src="" alt="문제 로딩 중..." style="max-width: 100%; display: none; border: 1px solid #ddd; margin: 0 auto;">
+        
+        <input type="hidden" id="current-problem-id">
+
+        <p style="color: gray; font-size: 0.9em; margin-top: 10px;">
+            답과 풀이 과정을 아래 캔버스에 작성하거나 사진을 찍어 올려주세요.
+        </p>
+    </div>
+
+    <div class="input-mode-tabs">
+        <button class="tab-btn active" onclick="switchTab('draw')">✍️ 직접 쓰기</button>
+        <button class="tab-btn" onclick="switchTab('upload')">📷 사진 업로드</button>
+    </div>
+
+    <div id="draw-mode">
+        <canvas id="drawingCanvas" width="600" height="300"></canvas>
+        <br>
+        
+        <div class="controls" style="margin-top: 10px;">
+            <button onclick="setTool('pen')" id="btn-pen" class="tool-btn active">펜</button>
+            <button onclick="setTool('eraser')" id="btn-eraser" class="tool-btn">지우개</button>
+            <button onclick="clearCanvas()" class="clear-btn">전체 삭제</button>
+        </div>
+    </div>
+
+    <div id="upload-mode" class="hidden">
+        <input type="file" id="imageInput" accept="image/*">
+        <br><br>
+    </div>
+
+    <br>
+    <button class="submit-btn" onclick="submitAnswer()">
+        제출 및 AI 분석
+    </button>
+
+    <div id="result-area" class="hidden result-box">
+        <h3>AI 분석 결과</h3>
+        <p><strong>결과:</strong> <span id="res-correct"></span></p>
+        <p><strong>원인 태그:</strong> <span id="res-tag" class="tag"></span></p>
+        <p><strong>조언:</strong> <span id="res-advice"></span></p>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

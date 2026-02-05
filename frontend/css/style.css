@@ -1,0 +1,79 @@
+/* frontend/css/style.css */
+body { 
+    font-family: 'Noto Sans KR', sans-serif; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.problem-box { 
+    border: 2px solid #333; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+    background-color: #f9f9f9; 
+}
+
+.input-mode-tabs { 
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 10px; 
+}
+
+.tab-btn { 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border: 1px solid #ccc; 
+    background: #eee; 
+}
+
+.tab-btn.active { 
+    background: #007bff; 
+    color: white; 
+    border-color: #007bff; 
+}
+
+/* 캔버스 스타일 */
+canvas { 
+    border: 1px solid #000; 
+    cursor: crosshair; 
+    touch-action: none; 
+    background: white; 
+}
+
+/* 유틸리티 클래스 */
+.hidden { display: none; }
+
+.result-box { 
+    margin-top: 20px; 
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    text-align: left; 
+}
+
+.tag { 
+    display: inline-block; 
+    padding: 5px 10px; 
+    border-radius: 15px; 
+    color: white; 
+    font-weight: bold; 
+}
+
+.tag.correct { background-color: green; }
+.tag.error { background-color: orange; }
+
+.submit-btn {
+    padding: 10px 30px; 
+    font-size: 1.2em; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}

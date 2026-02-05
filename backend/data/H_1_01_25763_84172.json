@@ -1,0 +1,49 @@
+{
+  "question_filename": "H_1_01_25763_84172.png",
+  "id": "25763_84172",
+  "question_info": [
+    {
+      "question_grade": "H",
+      "question_term": 1,
+      "question_unit": "01",
+      "question_topic": "0101001",
+      "question_topic_name": "다항식의 덧셈과 뺄셈",
+      "question_type1": "단답형",
+      "question_type2": 2,
+      "question_condition": 0,
+      "question_sector1": "이해",
+      "question_sector2": "변화와 관계",
+      "question_step": "기본",
+      "question_difficulty": 3,
+      "question_contents": 0
+    }
+  ],
+  "OCR_info": [
+    {
+      "figure_text": null,
+      "question_text": "다항식 $4x^2+2xy+y^2-3x+8y+9$를 $x$에 대한 내림차순으로 정리하시오.",
+      "question_bbox": [
+        {
+          "type": "line",
+          "bbox": [
+            1,
+            1,
+            574,
+            26
+          ],
+          "text": null
+        },
+        {
+          "type": "paragraph",
+          "bbox": [
+            1,
+            1,
+            576,
+            28
+          ],
+          "text": "다항식 $4x^2+2xy+y^2-3x+8y+9$를 $x$에 대한 내림차순으로 정리하시오."
+        }
+      ]
+    }
+  ]
+}
