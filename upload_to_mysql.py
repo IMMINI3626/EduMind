@@ -6,18 +6,18 @@ import os
 import io
 
 # =================================================================
-# [설정구간] 정민님의 환경에 맞게 이 부분만 수정하세요!
+#환경에 맞게 수정
 # =================================================================
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': '0000',       # <-- 정민님 MySQL 비밀번호!
-    'db': 'edumind_db',       # <-- 워크벤치 스키마 이름!
+    'password': '0000',       # <-- MySQL 비밀번호
+    'db': 'edumind_db',       # <-- 워크벤치 스키마 이름
     'charset': 'utf8mb4'
 }
 
-# 1. 엑셀 파일들의 경로 (2개)
-# ※ 경로 앞에 r 붙이기
+# 엑셀 파일들의 경로 (2개)
+# 경로 앞에 r 붙이기
 excel_files = [
     r"C:\university\univer4_1\Capstone Design\tranning_data\수학 과목 문제생성 데이터\Other\수학 과목 문제 생성 엑셀 정리.xlsx",
     r"C:\university\univer4_1\Capstone Design\tranning_data\수학 과목 자동 풀이 데이터\Other\수학과목 자동 풀이 데이터.xlsx" 
@@ -71,7 +71,7 @@ def get_json_info_from_zip(target_id):
     return None, None, None, None
 
 # =================================================================
-# [메인 로직] 데이터 통합 및 MySQL 전송
+# 데이터 통합 및 MySQL 전송
 # =================================================================
 def run_integration():
     print("엑셀 파일들을 읽어서 하나로 합치는 중입니다...")
@@ -80,7 +80,7 @@ def run_integration():
     for path in excel_files:
         if os.path.exists(path):
             try:
-                # 엑셀을 읽을 때 필요한 컬럼만 쏙 뽑아서 읽습니다 (에러 방지)
+                # 엑셀을 읽을 때 필요한 컬럼만 읽음 (에러 방지)
                 # 컬럼 이름이 파일마다 조금 다를 수 있어서 기본적으로 다 읽고 처리합니다.
                 temp_df = pd.read_excel(path)
                 # 필요한 컬럼만 통일 (이름이 다르면 여기서 조정 가능)
@@ -102,7 +102,7 @@ def run_integration():
     # 두 엑셀을 위아래로 합칩니다.
     df = pd.concat(df_list, ignore_index=True)
     
-    print("🔌 MySQL 데이터베이스에 연결 중...")
+    print("MySQL 데이터베이스에 연결 중...")
     try:
         conn = pymysql.connect(**db_config)
         cursor = conn.cursor()
@@ -126,7 +126,7 @@ def run_integration():
     
     total_count = len(df)
     print(f"총 {total_count}개의 통합 데이터를 처리하기 시작합니다.")
-    print("   (두 과목 데이터를 모두 뒤지느라 시간이 좀 걸립니다. 힘내세요!)")
+    print(" (두 과목 데이터를 모두 뒤지느라 시간이 좀 걸립니다. 힘내세요!)")
     
     processed_count = 0
     
